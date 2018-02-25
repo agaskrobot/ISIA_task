@@ -47,6 +47,20 @@ public class Matriz {
         } 
         return matrizResultante; 
     } 
+	
+	public static Matriz matrizTranspuesta(Matriz matrix) {
+
+
+        Matriz aux = new Matriz(matrix.datos.length, matrix.datos[0].length, false);;
+
+        for (int i = 0; i < aux.datos.length; i++) 
+            for (int j = 0; j < aux.datos.length; j++) 
+                aux.datos[i][j] = matrix.datos[j][i];
+
+
+        return aux;
+
+}
 
     @Override
     public String toString(){
