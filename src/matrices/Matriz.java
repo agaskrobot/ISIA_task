@@ -48,6 +48,7 @@ public class Matriz {
         return matrizResultante; 
     } 
 	
+
 	public static void multiplicarMatriz(double n, Matriz matrix) {
 
         int d = matrix.getDimension().height;
@@ -58,6 +59,21 @@ public class Matriz {
                 matrix.datos[i][j] *= n;
 
     }
+
+	public static Matriz matrizTranspuesta(Matriz matrix) {
+
+
+        Matriz aux = new Matriz(matrix.datos.length, matrix.datos[0].length, false);;
+
+        for (int i = 0; i < aux.datos.length; i++) 
+            for (int j = 0; j < aux.datos.length; j++) 
+                aux.datos[i][j] = matrix.datos[j][i];
+
+
+        return aux;
+
+}
+
 
     @Override
     public String toString(){
