@@ -47,6 +47,17 @@ public class Matriz {
         } 
         return matrizResultante; 
     } 
+	
+	public static void multiplicarMatriz(double n, Matriz matrix) {
+
+        int d = matrix.getDimension().height;
+
+
+        for (int i = 0; i < d; i++) 
+            for (int j = 0; j < d; j++)
+                matrix.datos[i][j] *= n;
+
+    }
 
     @Override
     public String toString(){
